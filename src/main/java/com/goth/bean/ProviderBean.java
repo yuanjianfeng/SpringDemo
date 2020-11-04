@@ -23,12 +23,11 @@ public class ProviderBean {
 
     public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InstantiationException, InvocationTargetException {
         Class test = ProviderBean.class;
-
+        ProviderBean per = new ProviderBean();
+        per.ProviderMethod("哥哥");
         //ProviderBean per = (ProviderBean) test.newInstance();//per
-        // Componet annotation = (Componet) test.getAnnotation(Componet.class);
-        //System.out.println(annotation.value());
-        Method provider = test.getMethod("ProviderMethod",String.class);
-        provider.invoke(test,"实力");
+        Method provider = test.getMethod("ProviderMethod", String.class);
+        provider.invoke(per, "实例");
 
 
     }
